@@ -4,107 +4,8 @@
 [![release-mac](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-mac.yml/badge.svg)](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-mac.yml)
 [![release-windows](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-windows.yml/badge.svg)](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-windows.yml)
 
-An unofficial desktop app for [Google Chat](http://chat.google.com) built with [Electron](https://www.electronjs.org)
-
-## Announcement
-
-This app is no longer maintained. Reasons:
-
-* My employer has moved to Slack
-* It takes lots of time to build and test on all the platforms.
-* Google is blocking 3rd party apps to log-in, see [#52](https://github.com/ankurk91/google-chat-electron/issues/52)
-
-:mega: Since version 2.17, we have removed support for snap package on Linux
-
-### Motivation
-
-* Google has [shutdown](https://support.google.com/chat/answer/10194711) the official Google Chat Desktop App in March
-  2021
-* Google is forcing users to use PWA which has less features
-* You don't want to install Chrome; just to use a PWA. :wink:
-
-### Installation (Debian based Linux)
-
-* You can download the latest debian installer from
-  [releases](https://github.com/ankurk91/google-chat-electron/releases/latest) section
-* Install the debian package with this command: (correct the file path yourself)
-
-```bash
-sudo apt install ~/path/to/google-chat-electron-xxx-amd64.deb
-```
-
-### Uninstall (Debian based Linux)
-
-* Logout and Quit from app
-* Remove the app with this command
-
-```bash
-sudo apt-get remove --purge google-chat-electron
-```
-
-* The uninstallation script should remove all relevant files and folders.
-
-### Installation (Mac)
-
-* Homebrew users can run
-
-```bash
-brew install --cask --no-quarantine google-chat-electron
-```
-
-or
-
-* Download the zip (darwin) file from [releases](https://github.com/ankurk91/google-chat-electron/releases/latest)
-* Extract the zip file
-* Move the app to your `~/Applications` folder
-* Fix the permission issue with this command
-
-```bash
-sudo xattr -rd com.apple.quarantine ~/Applications/google-chat-electron.app
-```
-
-* Above command should fix the Mac-OS Gatekeeper [issue](https://apple.stackexchange.com/questions/262355/)
-
-### Uninstall (Mac)
-
-* Logout and Quit from app
-* Move the app to trash
-
-### Installation Windows
-
-* :warning: This app is **NOT** available
-  on [Windows App Store](https://apps.microsoft.com/store/detail/gchat-for-desktop/9MZXBPL66066)
-* You can install this app by [downloading](https://github.com/ankurk91/google-chat-electron/releases/latest) the
-  installer
-* If you prefer [chocolatey](https://chocolatey.org/) on Windows, you can run:
-
-```powershell
-choco install unofficial-google-chat-electron
-```
-
-* If you prefer [winget-cli](https://github.com/microsoft/winget-cli) on Windows 10+, you can run:
-
-```bash
-winget install --id=ankurk91.GoogleChatElectron  -e
-```
-
-### Installation (Fedora/RHEL/CentOS)
-
-We don't provide installers for Fedora/RHEL/CentOS, but you can build a local RPM package by your own.
-
-```bash
-sudo dnf install rpm-build npm
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-git clone https://github.com/ankurk91/google-chat-electron.git
-cd google-chat-electron
-
-pnpm install
-npm run pack:linux
-npx electron-installer-redhat@^3 --src dist/google-chat-electron-linux-x64 --dest dist/installers/ --arch x86_64
-```
-
-This will create an RPM package in `./dist/installers` folder (you can specify any location you wish).
-You can install it with `dnf` or `rpm-ostree` depending on your distro.
+An unofficial desktop app for [Google Chat](http://chat.google.com) built with [Electron](https://www.electronjs.org).
+Based on work by ankurk91. (Currently just a direct fork, but will be working on upkeep shortly.)
 
 ### Supported Platforms
 
@@ -145,7 +46,7 @@ The app should work on all x64 and Apple arm64 platforms, but due to lack of tim
 This desktop app is just a wrapper which starts a chromium instance locally and runs the actual web-app in it. All
 rights to the [Google Chat](https://chat.google.com/) product is reserved by
 [Google Inc.](https://en.wikipedia.org/wiki/Google)
-This desktop client has no way to access none of your data.
+This desktop client has no way to access your data.
 
 ## License
 
