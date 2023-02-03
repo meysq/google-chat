@@ -1,8 +1,8 @@
 # Desktop app for Google Chat
 
-[![release-linux](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-linux.yml/badge.svg)](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-linux.yml)
-[![release-mac](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-mac.yml/badge.svg)](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-mac.yml)
-[![release-windows](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-windows.yml/badge.svg)](https://github.com/ankurk91/google-chat-electron/actions/workflows/release-windows.yml)
+[![release-linux](https://github.com/meysq/google-chat/actions/workflows/release-linux.yml/badge.svg)](https://github.com/meysq/google-chat/actions/workflows/release-linux.yml)
+[![release-mac](https://github.com/meysq/google-chat/actions/workflows/release-mac.yml/badge.svg)](https://github.com/meysq/google-chat/actions/workflows/release-mac.yml)
+[![release-windows](https://github.com/meysq/google-chat/actions/workflows/release-windows.yml/badge.svg)](https://github.com/meysq/google-chat/actions/workflows/release-windows.yml)
 
 An unofficial desktop app for [Google Chat](http://chat.google.com) built with [Electron](https://www.electronjs.org).
 Based on work by ankurk91. (Currently just a direct fork, but will be working on upkeep shortly.)
